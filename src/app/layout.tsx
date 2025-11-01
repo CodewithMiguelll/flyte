@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Flyte",
   description: "Flight Tracking For The Future!",
-};
+  };
 
 export default function RootLayout({
   children,
