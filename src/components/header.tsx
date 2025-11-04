@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Lora } from "next/font/google";
+
+
+const lora = Lora({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  style:"italic"
+});
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +29,7 @@ export default function Header() {
         >
           <Link
             href="/"
-            className="text-2xl font-bold tracking-tight text-gray-900"
+            className={`${lora.className} text-2xl font-bold tracking-tight text-gray-900`}
           >
             FLY<span className="text-blue-600">TE</span>
           </Link>

@@ -15,7 +15,7 @@ const Navigation = () => {
   const links = [
     { href: "/explore", label: "Explore" },
     { href: "/trips", label: "Trips" },
-    { href: "/book", label: "Book" },
+    { href: "/bookings", label: "Bookings" },
     { href: "/profile", label: "Profile" },
     { href: "/experience", label: "Experience" },
   ];

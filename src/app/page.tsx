@@ -4,6 +4,31 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Plane } from "lucide-react";
 import SplitText from "@/components/SplitText";
+import { Lora, IBM_Plex_Sans, Inter } from "next/font/google";
+
+/* 
+Font Configurations 
+  Heading: Lora
+
+  Subheading: Plus Jakarta Sans
+
+  Body: Inter
+*/
+
+const lora = Lora({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const ibm_Plex_Sans = IBM_Plex_Sans({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
@@ -26,7 +51,7 @@ export default function Home() {
           <SplitText
             tag="h1"
             text="Flight Tracking For The Future!"
-            className="text-5xl md:text-6xl font-semibold mb-6"
+            className={`${lora.className} text-5xl md:text-6xl font-semibold mb-6`}
             delay={100}
             duration={0.6}
             ease="power3.out"
@@ -68,7 +93,7 @@ export default function Home() {
       {/* FEATURED FLIGHTS */}
       <section className="mt-32 w-full max-w-6xl mx-auto px-4">
         <motion.h2
-          className="text-2xl md:text-4xl font-semibold mb-6 text-center"
+          className={`${ibm_Plex_Sans.className} text-2xl md:text-4xl font-semibold mb-6 text-center`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
