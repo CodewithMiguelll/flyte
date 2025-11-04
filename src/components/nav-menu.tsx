@@ -1,60 +1,52 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
+  NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 
-export default function Navbar() {
+const Navigation = () => {
   const pathname = usePathname();
 
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/trips", label: "Trips" },
+  const links = [
     { href: "/explore", label: "Explore" },
+    { href: "/trips", label: "Trips" },
+    { href: "/book", label: "Book" },
+    { href: "/profile", label: "Profile" },
+    { href: "/experience", label: "Experience" },
   ];
 
   return (
-    <nav className="w-full border-b border-gray-200 bg-white/60 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-center">
-        <NavigationMenu>
-          <NavigationMenuList className="flex gap-10">
-            {navItems.map(({ href, label }) => {
-              const isActive = pathname === href;
+    <div className="flex justify-center my-6 text-[#121212] font-medium">
+      <NavigationMenu>
+        {/* Add spacing *here* for consistent gaps between items */}
+        <NavigationMenuList className="flex gap-10">
+          {links.map((link) => {
+            const isActive = pathname === link.href;
 
-              return (
-                <NavigationMenuItem key={href}>
-                  <Link
-                    href={href}
-                    className={`relative text-sm font-medium transition-colors ${
-                      isActive
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-500"
-                    }`}
-                  >
-                    {label}
-
-                    {isActive && (
-                      <motion.span
-                        layoutId="activeLink"
-                        className="absolute left-0 -bottom-1 h-0.5 w-full bg-blue-600 rounded-full"
-                        transition={{
-                          type: "spring",
-                          stiffness: 300,
-                          damping: 25,
-                        }}
-                      />
-                    )}
-                  </Link>
-                </NavigationMenuItem>
-              );
-            })}
-          </NavigationMenuList>
-        </NavigationMenu>
-      </div>
-    </nav>
+            return (
+              <NavigationMenuItem key={link.href}>
+                <NavigationMenuLink
+                  asChild
+                  className={`relative px-3 py-2 text-[16px] transition-all duration-200 rounded-md ${
+                    isActive
+                      ? "text-blue-600 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:bg-blue-600 after:rounded-full"
+                      : "text-[#121212] hover:bg-blue-600 hover:text-white"
+                  }`}
+                >
+                  <Link href={link.href}>{link.label}</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            );
+          })}
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   );
-}
+};
+
+export default Navigation;

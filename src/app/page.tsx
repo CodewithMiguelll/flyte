@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone, Plane } from "lucide-react";
 import SplitText from "@/components/SplitText";
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 px-6">
           <SplitText
-          tag="h1"
+            tag="h1"
             text="Flight Tracking For The Future!"
             className="text-5xl md:text-6xl font-semibold mb-6"
             delay={100}
@@ -65,10 +65,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ✅ FEATURED FLIGHTS */}
+      {/* FEATURED FLIGHTS */}
       <section className="mt-32 w-full max-w-6xl mx-auto px-4">
         <motion.h2
-          className="text-2xl font-semibold mb-6 text-center"
+          className="text-2xl md:text-4xl font-semibold mb-6 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
@@ -93,6 +93,59 @@ export default function Home() {
                 {flight.from} → {flight.to}
               </h3>
               <p className="text-sm text-gray-600">{flight.status}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="mt-32 w-full max-w-6xl mx-auto px-4">
+        <motion.h2
+          className="text-2xl md:text-4xl font-semibold mb-12 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Why Choose Flyte?
+        </motion.h2>
+
+        <div className="grid gap-8 md:grid-cols-3">
+          {[
+            {
+              icon: <Plane size={32} className="text-blue-600 mx-auto" />,
+              title: "Lowest Fares",
+              description:
+                "Flyte offers the lowest fares on the market, ensuring you get the best value for your money.",
+            },
+            {
+              icon: <Phone size={32} className="text-blue-600 mx-auto" />,
+              title: "24/7 Customer Support",
+              description:
+                "Our dedicated support team is available around the clock to assist you with any inquiries or issues.",
+            },
+            {
+              icon: <ArrowRight size={32} className="text-blue-600 mx-auto" />,
+              title: "Easy Booking",
+              description:
+                "Book flights with just a few clicks, and enjoy hassle-free travel planning.",
+            },
+          ].map((feature, idx) => (
+            <motion.div
+              key={idx}
+              className="text-center p-6 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: idx * 0.2, // stagger each feature
+                duration: 0.6,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+            >
+              <div className="mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
             </motion.div>
           ))}
         </div>
