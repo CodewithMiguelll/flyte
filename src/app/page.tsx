@@ -10,7 +10,7 @@ import { Lora, IBM_Plex_Sans, Inter } from "next/font/google";
 Font Configurations 
   Heading: Lora
 
-  Subheading: Plus Jakarta Sans
+  Subheading: IBM Plex Sans
 
   Body: Inter
 */
@@ -44,13 +44,13 @@ export default function Home() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-linear-120 from-black/70 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-90 from-black/70 via-black/40 to-transparent" />
 
         {/* Content */}
         <div className="relative z-10 px-6">
           <SplitText
             tag="h1"
-            text="Flight Tracking For The Future!"
+            text="Bringing The Skies To Your Fingertips."
             className={`${lora.className} text-5xl md:text-6xl font-semibold mb-6`}
             delay={100}
             duration={0.6}
@@ -64,7 +64,7 @@ export default function Home() {
           />
 
           <motion.p
-            className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto"
+            className={`${inter.className} text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
@@ -126,51 +126,68 @@ export default function Home() {
       {/* Features Section */}
       <section className="mt-32 w-full max-w-6xl mx-auto px-4">
         <motion.h2
-          className="text-2xl md:text-4xl font-semibold mb-12 text-center"
+          className={`${ibm_Plex_Sans.className} text-2xl md:text-4xl font-semibold mb-12 text-center`}
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Why Choose Flyte?
+          Why’s Flyte The Right Choice?
         </motion.h2>
 
         <div className="grid gap-8 md:grid-cols-3">
           {[
             {
-              icon: <Plane size={32} className="text-blue-600 mx-auto" />,
+              image: "/images/airport.jpg",
+              icon: <Plane size={28} className="text-white mx-auto" />,
               title: "Lowest Fares",
               description:
-                "Flyte offers the lowest fares on the market, ensuring you get the best value for your money.",
+                "Get unbeatable ticket prices and exclusive deals, so you can travel farther for less.",
             },
             {
-              icon: <Phone size={32} className="text-blue-600 mx-auto" />,
+              image: "/images/air-hostess.jpg",
+              icon: <Phone size={28} className="text-white mx-auto" />,
               title: "24/7 Customer Support",
               description:
-                "Our dedicated support team is available around the clock to assist you with any inquiries or issues.",
+                "Our team’s got your back at every hour — real humans, real help, anytime.",
             },
             {
-              icon: <ArrowRight size={32} className="text-blue-600 mx-auto" />,
+              image: "/images/plane-wing.jpg",
+              icon: <ArrowRight size={28} className="text-white mx-auto" />,
               title: "Easy Booking",
               description:
-                "Book flights with just a few clicks, and enjoy hassle-free travel planning.",
+                "Book your next adventure in seconds — smooth, intuitive, and hassle-free.",
             },
           ].map((feature, idx) => (
             <motion.div
               key={idx}
-              className="text-center p-6 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition"
+              className="relative group overflow-hidden rounded-2xl h-96 cursor-pointer"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                delay: idx * 0.2, // stagger each feature
+                delay: idx * 0.2,
                 duration: 0.6,
                 ease: "easeOut",
               }}
               viewport={{ once: true }}
             >
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              {/* Background image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                style={{ backgroundImage: `url(${feature.image})` }}
+              />
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
+
+              {/* Text content */}
+              <div className="relative z-10 flex flex-col items-center justify-end text-center text-white p-6 h-full">
+                <div className="mb-3">{feature.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm text-gray-200 max-w-sm">
+                  {feature.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
