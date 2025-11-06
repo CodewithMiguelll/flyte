@@ -123,6 +123,60 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Booking Section */}
+      <section className="mt-32 w-full max-w-6xl mx-auto px-4">
+        <motion.h2
+          className={`${ibm_Plex_Sans.className} text-2xl md:text-4xl font-semibold mb-6 text-center`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+        >
+          Start Planning Your Next Trip
+        </motion.h2>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              image: "/images/air-hostess.jpg",
+              title: "Plan Your Trip",
+              description:
+                "Plan your next trip with ease and find the perfect flight for your needs.",
+            },
+            {
+              image: "/images/airplane.jpg",
+              title: "Save up to 30%",
+              description:
+                "Save up to 30% on your next flight with our exclusive offers and bonuses.",
+            },
+            {
+              image: "/images/airplane-landing.jpg",
+              title: "Track Flights",
+              description:
+                "Track your flights in real-time and get live updates on arrival times and delays.",
+            }
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 * idx, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="mt-32 w-full max-w-6xl mx-auto px-4">
         <motion.h2
