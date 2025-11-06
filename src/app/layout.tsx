@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
+
 export const metadata: Metadata = {
   title: "Book Flights, Track Prices, and Explore the Skies | FLYTE",
   description: "Your ultimate flight booking companion. Find the best deals, track prices, and embark on unforgettable journeys with FLYTE.",
