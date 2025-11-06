@@ -1,10 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-<<<<<<< HEAD
-=======
-@custom-variant dark (&:is(.dark *));
->>>>>>> dev
 
 @theme inline {
   --color-background: var(--background);
@@ -46,8 +42,6 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-<<<<<<< HEAD
-=======
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -125,5 +119,4 @@
     @apply bg-background text-foreground;
   }
 }
->>>>>>> dev
 
