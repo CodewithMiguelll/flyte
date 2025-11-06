@@ -93,31 +93,70 @@ export default function Home() {
       {/* FEATURED FLIGHTS */}
       <section className="mt-32 w-full max-w-6xl mx-auto px-4">
         <motion.h2
-          className={`${ibm_Plex_Sans.className} text-2xl md:text-4xl font-semibold mb-6 text-center`}
+          className={`${ibm_Plex_Sans.className} text-2xl md:text-4xl font-semibold mb-8 text-center`}
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
         >
           Popular Routes
         </motion.h2>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {[
-            { from: "Lagos (LOS)", to: "London (LHR)", status: "On Time" },
-            { from: "Abuja (ABV)", to: "Dubai (DXB)", status: "Delayed" },
-            { from: "Nairobi (NBO)", to: "Paris (CDG)", status: "Boarding" },
+            {
+              from: "Lagos (LOS)",
+              to: "London (LHR)",
+              status: "On Time",
+              price: "$520",
+              duration: "6h 45m",
+            },
+            {
+              from: "Abuja (ABV)",
+              to: "Dubai (DXB)",
+              status: "Delayed",
+              price: "$410",
+              duration: "7h 10m",
+            },
+            {
+              from: "Nairobi (NBO)",
+              to: "Paris (CDG)",
+              status: "Boarding",
+              price: "$460",
+              duration: "8h 05m",
+            },
           ].map((flight, idx) => (
             <motion.div
               key={idx}
-              className="bg-white border border-gray-200 rounded-xl shadow-sm p-6 hover:shadow-md transition"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 * idx }}
+              className="relative overflow-hidden bg-linear-to-br from-white to-blue-50 border border-gray-200 rounded-2xl shadow-md p-6 hover:shadow-lg transition-transform hover:-translate-y-1"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * idx, duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              <h3 className="font-semibold text-lg mb-2">
-                {flight.from} → {flight.to}
-              </h3>
-              <p className="text-sm text-gray-600">{flight.status}</p>
+              <div className="flex justify-between items-center mb-3">
+                <h3 className="font-semibold text-lg text-gray-800">
+                  {flight.from} → {flight.to}
+                </h3>
+                <span
+                  className={`px-3 py-1 text-xs font-medium rounded-full ${
+                    flight.status === "On Time"
+                      ? "bg-green-100 text-green-600"
+                      : flight.status === "Delayed"
+                      ? "bg-red-100 text-red-600"
+                      : "bg-yellow-100 text-yellow-600"
+                  }`}
+                >
+                  {flight.status}
+                </span>
+              </div>
+
+              <div className="flex justify-between items-center text-sm text-gray-600">
+                <p>{flight.duration}</p>
+                <p className="font-semibold text-gray-900">{flight.price}</p>
+              </div>
+
+              <div className="absolute -bottom-4 -right-8 w-32 h-32 bg-blue-200/30 rounded-full blur-2xl" />
             </motion.div>
           ))}
         </div>
@@ -137,27 +176,27 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              image: "/images/air-hostess.jpg",
-              title: "Plan Your Trip",
+              image: "/images/air-hostess-3.jpg",
+              title: "Voted Best Airline Service of the Year",
               description:
-                "Plan your next trip with ease and find the perfect flight for your needs.",
+                "Experience top-notch service and comfort on every flight with our award-winning airline.",
             },
             {
-              image: "/images/airplane.jpg",
-              title: "Save up to 30%",
+              image: "/images/bornil-amin-Y7F5ZRxDN6I-unsplash.jpg",
+              title: "Save 30% On Your Next Flight",
               description:
-                "Save up to 30% on your next flight with our exclusive offers and bonuses.",
+                "Book now and enjoy exclusive savings on your next adventure with our special offers.",
             },
             {
-              image: "/images/airplane-landing.jpg",
-              title: "Track Flights",
+              image: "/images/jezael-melgoza-ryqRm-dfZbI-unsplash.jpg",
+              title: "Stopovers Made Easy",
               description:
-                "Track your flights in real-time and get live updates on arrival times and delays.",
-            }
+                "Discover convenient stopover options to make your journey more enjoyable and flexible.",
+            },
           ].map((item, idx) => (
             <motion.div
               key={idx}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition p-.5"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 * idx, duration: 0.6 }}
