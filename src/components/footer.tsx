@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Facebook, Twitter, Instagram, Plane } from "lucide-react";
+import { Plane, StarsIcon, Github, Instagram } from "lucide-react";
 import { Lora } from "next/font/google";
-
 
 const lora = Lora({
   weight: ["400", "700"],
@@ -56,21 +55,46 @@ const Footer = () => {
         <div>
           <h4 className="text-gray-900 font-semibold mb-4">Connect</h4>
           <div className="flex justify-center md:justify-start gap-4">
-            {[Facebook, Twitter, Instagram].map((Icon, i) => (
-              <motion.a
-                key={i}
-                href="#"
-                whileHover={{ scale: 1.15, y: -2 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="p-2 rounded-full border border-gray-200 hover:border-blue-600 hover:bg-blue-50"
-              >
-                <Icon className="w-5 h-5 text-gray-700 hover:text-blue-600 transition-colors" />
-              </motion.a>
-            ))}
+            {/* GitHub */}
+            <motion.a
+              href="https://github.com/CodeWithMiguelll"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-2 rounded-full border border-gray-200 hover:border-blue-600 hover:bg-blue-50"
+            >
+              <Github className="w-5 h-5 text-gray-700 hover:text-blue-600 transition-colors" />
+            </motion.a>
+
+            {/* Instagram */}
+            <motion.a
+              href="https://instagram.com/_big.migz"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-2 rounded-full border border-gray-200 hover:border-pink-600 hover:bg-pink-50"
+            >
+              <Instagram className="w-5 h-5 text-gray-700 hover:text-pink-600 transition-colors" />
+            </motion.a>
+
+            {/* The Studio */}
+            <motion.a
+              href="https://madebynorthlight.com.ng"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-2 rounded-full border border-gray-200 hover:border-[#7e57c2]"
+            >
+              <StarsIcon className="w-5 h-5 text-gray-700 hover:text-[#7e57c2] transition-colors" />
+            </motion.a>
           </div>
         </div>
       </div>
 
+      {/* Bottom bar */}
       <div className="border-t border-gray-200 mt-10 py-4 text-sm text-gray-500 text-center">
         © {new Date().getFullYear()} FLYTE — Designed for dreamers of the sky.
       </div>
