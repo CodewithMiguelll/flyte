@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Plane } from "lucide-react";
 import SplitText from "@/components/SplitText";
+import MasonryGrid from "@/components/masonry";
 import { Lora, IBM_Plex_Sans, Inter } from "next/font/google";
 
 /* 
@@ -285,6 +286,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Famous Fares Section */}
+      <MasonryGrid />
     </main>
   );
 }
