@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Plane } from "lucide-react";
@@ -203,9 +204,11 @@ export default function Home() {
               transition={{ delay: 0.2 * idx, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
+                width={800}
+                height={800}
                 className="w-full h-48 object-cover"
               />
               <div className="p-4 text-center">
@@ -294,9 +297,11 @@ export default function Home() {
       <section className="relative mt-32 mb-16 w-full h-96 rounded-2xl overflow-hidden p-2">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/john-mcarthur-X_MOr6oa4-k-unsplash.jpg" // swap this with your preferred bg image
             alt="Plane flying"
+            width={800}
+            height={800}
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/60" /> {/* overlay */}
