@@ -289,6 +289,60 @@ export default function Home() {
 
       {/* Famous Fares Section */}
       <MasonryGrid />
+
+      {/* Call to Action Section */}
+      <section className="relative mt-32 mb-16 w-full h-96 rounded-2xl overflow-hidden p-2">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="/images/john-mcarthur-X_MOr6oa4-k-unsplash.jpg" // swap this with your preferred bg image
+            alt="Plane flying"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" /> {/* overlay */}
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-center text-white py-20 px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-5xl font-semibold mb-4"
+          >
+            Ready to Book Your Next Adventure?
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-xl mx-auto mb-8 text-gray-200"
+          >
+            Get exclusive flight deals, travel tips, and updates straight to
+            your inbox.
+          </motion.p>
+
+          <motion.form
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md mx-auto"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 border-white border"
+            />
+            <button
+              type="submit"
+              className="bg-blue-600 hover:bg-blue-700 transition-colors font-semibold py-3 px-6 rounded-lg text-white w-full sm:w-auto"
+            >
+              Subscribe
+            </button>
+          </motion.form>
+        </div>
+      </section>
     </main>
   );
 }
