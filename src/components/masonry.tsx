@@ -30,9 +30,9 @@ const fares = [
     price: "₦400,000",
   },
   {
-    src: "/images/chris-karidis-nnzkZNYWHaU-unsplash.jpg",
-    label: "Lagos → Paris",
-    price: "₦230,000",
+    src: "/images/kalen-emsley-PVQ0NfcJ3PM-unsplash.jpg",
+    label: "Kaduna → Hawaii",
+    price: "₦550,000",
   },
 ];
 
@@ -68,8 +68,8 @@ const MasonryGrid = () => {
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-              <p className="text-white font-medium text-sm">{fare.label}</p>
-              <p className="text-blue-400 text-sm">{fare.price}</p>
+              <p className="text-white font-medium text-md">{fare.label}</p>
+              <p className="text-blue-400 text-sm font-bold">{fare.price}</p>
             </div>
           </motion.div>
         ))}
