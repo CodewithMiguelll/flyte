@@ -209,7 +209,7 @@ export default function Home() {
                 alt={item.title}
                 width={800}
                 height={800}
-                className="w-full h-48 object-cover"
+                className="w-full h-96 object-cover"
               />
               <div className="p-4 text-center">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
