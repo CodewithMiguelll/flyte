@@ -42,15 +42,20 @@ export default function Header() {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex gap-3">
-          <Button
-            variant="ghost"
-            className="rounded-full text-gray-700 hover:text-blue-600"
-          >
-            Sign In
-          </Button>
-          <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white">
-            Sign Up
-          </Button>
+          <Link href="/auth/login">
+            <Button
+              variant="ghost"
+              className="rounded-full text-gray-700 hover:text-blue-600"
+            >
+              Sign In
+            </Button>
+          </Link>
+
+          <Link href="/auth/signup">
+            <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white">
+              Sign Up
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
