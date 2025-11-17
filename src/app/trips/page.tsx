@@ -24,6 +24,24 @@ export default function TripsPage() {
       date: "Jan 29, 2025",
       image: "/images/kalen-emsley-PVQ0NfcJ3PM-unsplash.jpg",
     },
+    {
+      id: 4,
+      destination: "Yucatán Peninsula, Mexico",
+      date: "Feb 17, 2025",
+      image: "/images/alex-azabache-8L7mOETNgHA-unsplash.jpg",
+    },
+    {
+      id: 5,
+      destination: "Barcelona, Spain",
+      date: "Apr 17, 2025",
+      image: "/images/dorian-d1-aX5NLrKgRBc-unsplash.jpg",
+    },
+    {
+      id: 6,
+      destination: "Madrid, Spain",
+      date: "Apr 27, 2025",
+      image: "/images/jorge-fernandez-salas-ChSZETOal-I-unsplash.jpg",
+    },
   ];
 
   return (
