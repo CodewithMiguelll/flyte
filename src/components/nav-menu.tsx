@@ -59,13 +59,13 @@ const Navigation = () => {
         </div>
         <div className="hidden md:flex gap-4.5">
           <Link href="/auth/signup">
-            <button className="bg-[#292929] backdrop-blur-2xl text-white p-2.5 rounded-md">
+            <button className="bg-[#292929] backdrop-blur-2xl text-white p-2.5 rounded-md hover:translate-y-1 transition">
               Get Started
             </button>
           </Link>
 
           <Link href="/auth/login">
-            <button className="bg-blue-500 text-white p-2.5 rounded-md">
+            <button className="bg-blue-500 text-white p-2.5 rounded-md hover:translate-y-1 transition">
               Log In
             </button>
           </Link>
