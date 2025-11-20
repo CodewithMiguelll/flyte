@@ -32,6 +32,11 @@ const ibm_Plex_Sans = IBM_Plex_Sans({
   subsets: ["latin"],
 });
 
+const ibm_Plex_Sans_bold = IBM_Plex_Sans({
+  weight: ["700"],
+  subsets: ["latin"],
+});
+
 export default function Home() {
   return (
     <main className="w-full text-gray-900">
@@ -229,7 +234,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Why’s Flyte The Right Choice?
+          Why&apos;s Flyte The Right Choice?
         </motion.h2>
 
         <div className="grid gap-8 md:grid-cols-3">
@@ -313,7 +318,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-semibold mb-4"
+            className={`${ibm_Plex_Sans_bold.className} text-3xl md:text-5xl font-semibold mb-4`}
           >
             Ready to Book Your Next Adventure?
           </motion.h2>

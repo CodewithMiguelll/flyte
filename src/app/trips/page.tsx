@@ -2,6 +2,22 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { MapPin, Calendar, Plane } from "lucide-react";
+import { Lora, Inter, IBM_Plex_Sans } from "next/font/google";
+
+const lora = Lora({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const ibm_Plex_Sans = IBM_Plex_Sans({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 export default function TripsPage() {
   // Mock trips 
@@ -48,10 +64,10 @@ export default function TripsPage() {
     <main className="max-w-7xl mx-auto px-6 py-16">
       {/* ======================= HEADER ======================= */}
       <section className="mb-14">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+        <h1 className={`${lora.className} text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900`}>
           Your Trips
         </h1>
-        <p className="mt-3 text-gray-600 max-w-xl">
+        <p className={`${inter.className} mt-3 text-gray-600 max-w-xl`}>
           Track your journeys, revisit your adventures, and get inspired for
           your next escape.
         </p>
@@ -96,7 +112,7 @@ export default function TripsPage() {
 
               {/* Content */}
               <div className="absolute bottom-0 p-5 text-white">
-                <h3 className="text-2xl font-bold drop-shadow">
+                <h3 className={`${ibm_Plex_Sans.className} text-2xl font-bold drop-shadow`}>
                   {trip.destination}
                 </h3>
 

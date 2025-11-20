@@ -2,7 +2,23 @@
 import { motion } from "framer-motion";
 import { Rocket, Briefcase, StarsIcon } from "lucide-react";
 import Image from "next/image";
-import { cn } from "@/lib/utils"; // optional utility if you're using it
+import { Lora, Inter, IBM_Plex_Sans } from "next/font/google";
+
+const lora = Lora({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const ibm_Plex_Sans = IBM_Plex_Sans({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
 
 export default function ExperiencePage() {
   const benefits = [
@@ -54,7 +70,7 @@ export default function ExperiencePage() {
           <h1 className="text-5xl md:text-7xl font-extrabold text-white drop-shadow tracking-tight">
             Your Journey, Elevated
           </h1>
-          <p className="text-lg md:text-2xl text-white/90 mt-4 leading-relaxed">
+          <p className={`${inter.className} text-lg md:text-2xl text-white/90 mt-4 leading-relaxed`}>
             Travel meets comfort, rewards, and pure luxury. Let Flyte redefine
             how you move.
           </p>
@@ -71,10 +87,10 @@ export default function ExperiencePage() {
       {/* ======================= BENEFITS ======================= */}
       <section className="mb-28">
         <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">
+          <h2 className={`${ibm_Plex_Sans.className} text-4xl md:text-5xl font-extrabold text-gray-900 mb-2`}>
             Benefits of Flying Flyte
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+          <p className={`${inter.className} max-w-2xl mx-auto text-gray-600 text-lg`}>
             Every mile counts — perks, rewards, and convenience designed for the
             modern explorer.
           </p>

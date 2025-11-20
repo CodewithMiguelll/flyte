@@ -2,6 +2,23 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import { Lora, Inter, IBM_Plex_Sans } from "next/font/google";
+
+const lora = Lora({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const ibm_Plex_Sans = IBM_Plex_Sans({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
 
 const destinations = [
   {
@@ -116,7 +133,7 @@ export default function ExplorePage() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-16">
       <motion.h1
-        className="text-4xl md:text-5xl font-semibold text-center mb-4"
+        className={`${lora.className} text-4xl md:text-5xl font-semibold text-center mb-4`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -124,7 +141,7 @@ export default function ExplorePage() {
       </motion.h1>
 
       <motion.p
-        className="text-gray-600 text-center mb-12 max-w-xl mx-auto"
+        className={`${inter.className} text-gray-600 text-center mb-12 max-w-xl mx-auto`}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
