@@ -1,4 +1,10 @@
 "use client";
+import { IBM_Plex_Sans } from "next/font/google";
+
+const ibm_Plex_Sans = IBM_Plex_Sans({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -40,7 +46,7 @@ const MasonryGrid = () => {
   return (
     <section className="mt-32 max-w-6xl mx-auto px-4">
       <motion.h2
-        className="text-2xl md:text-4xl font-semibold mb-10 text-center"
+        className={`${ibm_Plex_Sans.className} text-2xl md:text-4xl font-semibold mb-10 text-center`}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
