@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     "vacation deals",
   ],
   openGraph: {
-    title: "Explore the World with Flyte ✈️",
+    title: "Explore the World with Flyte",
     description:
       "From Paris to Tokyo, discover breathtaking destinations and exclusive flight deals with Flyte.",
-    url: "https://flyte.com/explore",
+    url: "https://flyte.vercel.app/explore",
     siteName: "Flyte",
     images: [
       {
-        url: "/images/og-explore.jpg",
+        url: "/assets/og-explore.jpg",
         width: 1200,
         height: 630,
         alt: "Explore destinations around the world with Flyte",
