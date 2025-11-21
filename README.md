@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  Flyte
 
-## Getting Started
+Flyte is a sleek, modern travel platform built for exploring destinations, tracking flights, and managing bookings with ease.  
+Designed with speed, clarity, and a touch of elegance — Flyte turns travel planning into an experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+##  Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Book Flights:** Find routes, compare options, and secure your seat in seconds.  
+- **Track Prices:** Stay updated with fare drops and time-sensitive deals.  
+- **Explore Destinations:** Browse curated locations with clean visuals and travel insights.  
+- **Manage Bookings:** View active flights, upcoming trips, and past journeys.  
+- **User Profiles:** Track Flyte+ points and personalize your travel dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Tech Stack
 
-## Learn More
+- **Next.js** — App Router, server components, optimized routing  
+- **Tailwind CSS** — Utility-first styling for rapid UI development  
+- **Radix UI** — Accessible, unstyled primitives powering interactive components  
+- **Lucide Icons** — Clean, consistent iconography
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##  Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository**
+   ```
+   git clone https://github.com/your-username/flyte.git
+   cd flyte
+   ```
+2. **Install dependencies**
+   ```
+   npm install
+   ```
+3. **Run the app**
+   ```
+   npm run dev
+   ```
+4. **Open The App:**
+   ```
+   http://localhost:3000
+   ```
 
-## Deploy on Vercel
+   ---
+   ## Credits
+   **Built with ❤️ by [Chikaima](https://github.com/CodeWithMiguelll)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   **Have fun, and let's fly!**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   
