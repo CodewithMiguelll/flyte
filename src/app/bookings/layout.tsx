@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     title: "Your Bookings on Flyte",
     description:
       "Access and manage all your travel bookings from one convenient dashboard. Fly smarter with Flyte.",
-    url: "https://flyte.vercel.app/bookings",
+    url: "https://flyte-one.vercel.app/bookings",
     siteName: "Flyte",
     images: [
       {
-        url: "/assets/og-bookings.jpg",
+        url: "/assets/og-images-bookings.png",
         width: 1200,
         height: 630,
         alt: "Access and manage your flight bookings on Flyte",

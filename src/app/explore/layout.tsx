@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     title: "Explore the World with Flyte",
     description:
       "From Paris to Tokyo, discover breathtaking destinations and exclusive flight deals with Flyte.",
-    url: "https://flyte.vercel.app/explore",
+    url: "https://flyte-one.vercel.app/explore",
     siteName: "Flyte",
     images: [
       {
-        url: "/assets/og-explore.jpg",
+        url: "/assets/og-image-explore.png",
         width: 1200,
         height: 630,
         alt: "Explore destinations around the world with Flyte",

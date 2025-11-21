@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     title: "Flyte Profile Dashboard",
     description:
       "Track your points, view your bookings, and personalize your travel experience with Flyte.",
-    url: "https://flyte.vercel.app/profile",
+    url: "https://flyte-one.vercel.app/profile",
     siteName: "Flyte",
     images: [
       {
-        url: "/assets/og-profile.jpg",
+        url: "/assets/og-image-profile.png",
         width: 1200,
         height: 630,
         alt: "Flyte profile dashboard interface",

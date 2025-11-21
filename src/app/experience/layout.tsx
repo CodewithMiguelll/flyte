@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     title: "Explore Flyte Experiences",
     description:
       "Discover curated activities, unforgettable adventures, and Flyte+ exclusive experiences around the world.",
-    url: "https://flyte.vercel.app/experience",
+    url: "https://flyte-one.vercel.app/experience",
     siteName: "Flyte",
     images: [
       {
-        url: "/assets/og-experience.jpg",
+        url: "/assets/og-image-experience.png",
         width: 1200,
         height: 630,
         alt: "Flyte immersive experience banner",
