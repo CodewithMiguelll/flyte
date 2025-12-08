@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Plane, StarsIcon, Github, Instagram } from "lucide-react";
+import { Plane, StarsIcon, Github, Instagram, TwitterIcon } from "lucide-react";
 import { Lora } from "next/font/google";
 
 const lora = Lora({
@@ -89,6 +89,18 @@ const Footer = () => {
               className="p-2 rounded-full border border-gray-200 hover:border-[#7e57c2]"
             >
               <StarsIcon className="w-5 h-5 text-gray-700 hover:text-[#7e57c2] transition-colors" />
+            </motion.a>
+
+            {/* X */}
+            <motion.a
+              href="https://x.com/bigmigzz_"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.15, y: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-2 rounded-full border border-gray-200 hover:border-[#1DA1F2]"
+            >
+              <TwitterIcon className="w-5 h-5 text-gray-700 hover:text-[#1DA1F2] transition-colors" />
             </motion.a>
           </div>
         </div>
