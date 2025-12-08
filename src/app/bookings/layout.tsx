@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Your Bookings | Flyte",
+  title: "Your Bookings",
   description:
     "View your upcoming flights, past trips, and manage your travel bookings effortlessly with Flyte.",
   keywords: [

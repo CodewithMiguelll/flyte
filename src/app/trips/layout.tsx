@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Trips | FLYTE",
-    template: "FLYTE | %s",
-  },
+  title: "Trips",
   description:
     "View your past travel history, track upcoming trips, and rediscover destinations you've explored with FLYTE.",
   keywords: [
