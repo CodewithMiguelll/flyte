@@ -53,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>k
+      <body>
         <Navbar />
         <main>{children}</main>
         <Footer />
