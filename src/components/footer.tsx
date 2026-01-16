@@ -69,7 +69,7 @@ const Footer = () => {
 
             {/* Instagram */}
             <motion.a
-              href="https://instagram.com/_big.migz"
+              href="https://instagram.com/chikaimaaa_"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.15, y: -2 }}
